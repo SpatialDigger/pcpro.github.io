@@ -83,8 +83,33 @@
             font-size: 36px;
             margin-bottom: 20px;
         }
-        .pricing p {
-            font-size: 20px;
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .pricing-plan {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .pricing-plan h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .pricing-plan p {
+            font-size: 18px;
+        }
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6b00;
+            margin: 15px 0;
         }
         footer {
             background: #333;
@@ -134,9 +159,27 @@
 </div>
 
 <section class="pricing">
-    <h2>Get PCPro3 Today</h2>
-    <p>Unlock the full power of point cloud processing.</p>
-    <a href="#" class="cta-button">Buy Now</a>
+    <h2>Choose Your PCPro3 Plan</h2>
+    <div class="pricing-table">
+        <div class="pricing-plan">
+            <h3>🎓 Educational</h3>
+            <p>For students, researchers, and universities.</p>
+            <p class="price">$99/year</p>
+            <a href="#" class="cta-button">Get Educational License</a>
+        </div>
+        <div class="pricing-plan">
+            <h3>👤 Individual</h3>
+            <p>For personal and independent professionals.</p>
+            <p class="price">$199/year</p>
+            <a href="#" class="cta-button">Get Individual License</a>
+        </div>
+        <div class="pricing-plan">
+            <h3>🏢 Commercial</h3>
+            <p>For businesses and enterprise use.</p>
+            <p class="price">$499/year</p>
+            <a href="#" class="cta-button">Get Commercial License</a>
+        </div>
+    </div>
 </section>
 
 <footer>
