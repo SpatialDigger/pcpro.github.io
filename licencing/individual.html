@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCPro3 🎯 Individual Plan</title>
+  <link rel="stylesheet" href="style.css"> <!-- Ensure this is linked to your existing CSS file -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script> <!-- PayPal SDK -->
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1>PCPro3 🎯 Individual Plan</h1>
+      <p>Unlock the power of PCPro3 with an exclusive price and supercharge your personal or professional projects.</p>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+      <h2>Choose Your Plan</h2>
+      <p>PCPro3 offers flexible pricing options for individuals looking to use point cloud processing tools for various applications. Whether you're working on personal projects, prototypes, or professional tasks, PCPro3 is here to help.</p>
+      
+      <div class="pricing-table">
+        <!-- Demo Card -->
+        <div class="pricing-plan demo-card">
+          <h3>Try Before You Buy!</h3>
+          <p>We understand that choosing the right software is a big decision. That's why we offer a <strong>free demo</strong> of PCPro3, allowing you to test the software with your own point cloud data before making a commitment.</p>
+          <p>Get started by downloading the demo from our official GitHub page and explore how PCPro3 can improve your 3D data processing.</p>
+          <a href="https://github.com/SpatialDigger/PCPro3/releases/tag/v1.0.0" target="_blank" class="cta-button">Try the Demo for Free</a>
+        </div>
+
+        <!-- 3-Month Plan -->
+        <div class="pricing-plan">
+          <h3>3-Month Plan</h3>
+          <p class="price">£29 / $37 / €34</p>
+          <p class="pricing-term">Perfect for short-term projects or exploration</p>
+          <a href="#" class="cta-button">Get This Plan</a>
+        </div>
+
+        <!-- 1-Year Plan -->
+        <div class="pricing-plan">
+          <h3>1-Year Plan</h3>
+          <p class="price">£93 / $118 / €110 <span class="savings">(Save 20%)</span></p>
+          <p class="pricing-term">Ideal for a full year of point cloud processing</p>
+          <a href="#" class="cta-button">Get This Plan</a>
+        </div>
+      </div>
+
+      <p><strong>Important:</strong> Pricing is available in GBP, USD, and EUR. PayPal will automatically convert payments based on the current exchange rates.</p>
+    </section>
+
+    <!-- Sales Pitch Section -->
+    <section class="sales-pitch">
+      <h2>Why Choose PCPro3 for Your Projects?</h2>
+      <ul>
+        <li>🚀 <strong>Boost Your Project Quality</strong>: Take your point cloud processing to the next level.</li>
+        <li>📊 <strong>Perfect for Personal and Professional Projects</strong>: Enhance your workflows with professional-grade tools.</li>
+        <li>👥 <strong>Showcase Your Work</strong>: Create stunning visualizations and reports.</li>
+        <li>🌍 <strong>Real-World Applications</strong>: Get valuable experience with real-world point cloud data processing.</li>
+      </ul>
+    </section>
+
+    <!-- Payment Options Section -->
+    <section class="payment-options">
+      <h2>Payment Options</h2>
+      <p>Select your preferred payment method to get started:</p>
+
+      <div id="paypal-button-container"></div>
+      <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '37.00' // Price for 3 months; adjust based on the selected plan
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Payment successful! Thank you, ' + details.payer.name.given_name);
+          });
+        },
+        onError: function(err) {
+          console.error('Error:', err);
+          alert('An error occurred with the payment. Please try again.');
+        }
+      }).render('#paypal-button-container');
+      </script>
+    </section>
+
+    <!-- Note Section -->
+    <section class="note">
+      <p>* Demo available for all users. Payment options will be processed upon selecting a plan.</p>
+    </section>
+
+    <!-- Invitation to Publish and Promote Work -->
+    <section class="publish-invitation">
+      <h2>Ready to Share Your Work? Let's Promote It!</h2>
+      <p>If you're planning to publish or showcase your work, get in touch! We can help promote your project and provide exposure to your work, helping you reach a wider audience and gain recognition.</p>
+      <p>Reach out to us at <strong><a href="mailto:pointcloud.pro@gmail.com">pointcloud.pro@gmail.com</a></strong> to discuss how we can help share your project.</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
