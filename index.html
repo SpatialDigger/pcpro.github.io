@@ -110,11 +110,20 @@
             font-size: 18px;
             margin: 10px 0;
         }
+        .pricing-term {
+            font-weight: bold;
+        }
         .price {
             font-size: 24px;
             font-weight: bold;
             color: #ff6b00;
             margin: 15px 0;
+        }
+        .savings {
+            font-size: 16px;
+            color: green;
+            font-weight: normal;
+            margin-left: 5px;
         }
         footer {
             background: #333;
@@ -127,84 +136,83 @@
 </head>
 <body>
 
-<header>
-    <h1>PCPro3 - The Ultimate Point Cloud Processing Tool</h1>
-</header>
+    <header>
+        PCPro3 - The Ultimate Point Cloud Processing Tool
+    </header>
 
-<p class="under-construction">Under construction - contents subject to change</p>
+    <p>Under construction - contents subject to change</p>
 
-<section class="hero">
-    <h2>Transform Your 3D Data with PCPro3</h2>
-    <p>Process, analyze, and visualize massive point cloud datasets effortlessly with unparalleled precision.</p>
-    <a href="#" class="cta-button">Get PCPro3 Now</a>
-</section>
+    <section class="hero">
+        <h1>Transform Your 3D Data with PCPro3</h1>
+        <p>Process, analyze, and visualize massive point cloud datasets effortlessly.</p>
+        <a href="#" class="cta-button">Get PCPro3 Now</a>
+    </section>
 
-<div class="container">
-    <h2>Why Choose PCPro3?</h2>
-    <div class="features">
-        <div class="feature">
-            <h3>🚀 Lightning-Fast Processing</h3>
-            <p>Efficiently handle and process large-scale 3D point cloud data in record time.</p>
+    <div class="container">
+        <h2>Why Choose PCPro3?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🚀 Lightning-Fast Processing</h3>
+                <p>Handle large-scale 3D point cloud data with unparalleled speed.</p>
+            </div>
+            <div class="feature">
+                <h3>🎨 Stunning Visualization</h3>
+                <p>Interact with high-resolution 3D models in real time.</p>
+            </div>
+            <div class="feature">
+                <h3>📂 Wide Format Support</h3>
+                <p>Import and export PLY, LAS, and more with ease.</p>
+            </div>
         </div>
-        <div class="feature">
-            <h3>🎨 Stunning Visualization</h3>
-            <p>Experience high-resolution 3D models in real-time with smooth navigation.</p>
-        </div>
-        <div class="feature">
-            <h3>📂 Wide Format Support</h3>
-            <p>Import and export formats like PLY, LAS, and more with absolute ease.</p>
-        </div>
-    </div>
 
-    <div class="video">
-        <h2>See PCPro3 in Action</h2>
-        <video width="70%" controls>
-            <source src="https://youtu.be/N8-fCLc5bgc">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
-
-<section class="pricing">
-    <h2>Choose Your PCPro3 Plan for 2025</h2>
-    <div class="pricing-table">
-        <div class="pricing-plan">
-            <h3>🎓 Student Plan</h3>
-            <p>Single License</p>
-            <ul>
-                <li>3 Months: <span class="price">£29/$37</span></li>
-                <li>Annual: <span class="price">£93/$118</span> <span class="savings">(Save 20%)</span></li>
-            </ul>
-            <a href="#" class="cta-button">Get Student License</a>
-        </div>
-        <div class="pricing-plan">
-            <h3>👤 Individual Plan</h3>
-            <p>Two Licenses</p>
-            <ul>
-                <li>3 Months: <span class="price">£55/$71</span></li>
-                <li>Annual: <span class="price">£176/$227</span> <span class="savings">(Save 20%)</span></li>
-                <li>Lifetime: <span class="price">£440/$570</span></li>
-            </ul>
-            <a href="#" class="cta-button">Get Individual License</a>
-        </div>
-        <div class="pricing-plan">
-            <h3>🏢 Organizational Plan</h3>
-            <p>Seven Licenses</p>
-            <ul>
-                <li>3 Months: <span class="price">£129/$166</span></li>
-                <li>Annual: <span class="price">£412/$530</span> <span class="savings">(Save 20%)</span></li>
-                <li>Lifetime: <span class="price">£1,030/$1,325</span></li>
-            </ul>
-            <a href="#" class="cta-button">Get Organizational License</a>
+        <div class="video">
+            <h2>See PCPro3 in Action</h2>
+            <video width="70%" controls>
+                <source src="https://youtu.be/N8-fCLc5bgc">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
-    <p class="pricing-notes">Annual plans save 20% compared to purchasing four 3-month licenses. Lifetime plans are priced around 2.5 times the annual price.</p>
-</section>
 
-<footer>
-    <p>&copy; 2025 PCPro3. All Rights Reserved.</p>
-</footer>
+    <section class="pricing">
+        <h2>Choose Your PCPro3 Plan for 2025</h2>
+        <div class="pricing-table">
+            <div class="pricing-plan">
+                <h3>🎓 Student Plan</h3>
+                <p>Single License</p>
+                <ul>
+                    <li><span class="pricing-term">3 Months:</span> <span class="price">£29/$37</span></li>
+                    <li><span class="pricing-term">Annual:</span> <span class="price">£93/$118</span> <span class="savings">(Save 20%)</span></li>
+                </ul>
+                <a href="#" class="cta-button">Get Student License</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>👤 Individual Plan</h3>
+                <p>Two Licenses</p>
+                <ul>
+                    <li><span class="pricing-term">3 Months:</span> <span class="price">£55/$71</span></li>
+                    <li><span class="pricing-term">Annual:</span> <span class="price">£176/$227</span> <span class="savings">(Save 20%)</span></li>
+                    <li><span class="pricing-term">Lifetime:</span> <span class="price">£440/$570</span></li>
+                </ul>
+                <a href="#" class="cta-button">Get Individual License</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>🏢 Organizational Plan</h3>
+                <p>Seven Licenses</p>
+                <ul>
+                    <li><span class="pricing-term">3 Months:</span> <span class="price">£129/$166</span></li>
+                    <li><span class="pricing-term">Annual:</span> <span class="price">£412/$530</span> <span class="savings">(Save 20%)</span></li>
+                    <li><span class="pricing-term">Lifetime:</span> <span class="price">£1,030/$1,325</span></li>
+                </ul>
+                <a href="#" class="cta-button">Get Organizational License</a>
+            </div>
+        </div>
+        <p class="pricing-notes">Annual plans save 20% compared to purchasing four 3-month licenses. Lifetime plans are priced around 2.5 times the annual price.</p>
+    </section>
+
+    <footer>
+        &copy; 2025 PCPro3. All Rights Reserved.
+    </footer>
 
 </body>
-
 </html>
