@@ -327,3 +327,37 @@
 .article .button:hover {
     background: #d55a00;
 }
+
+.demo {
+    text-align: center;
+    background-color: #222; /* Dark background for contrast */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
+    border: 2px solid #ff8500; /* Orange border for visibility */
+}
+
+.demo h2, .demo p {
+    color: white;
+}
+
+.demo .cta-button {
+    background-color: #ff8500; /* Bright orange for emphasis */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 133, 0, 0.3);
+}
+
+.demo .cta-button:hover {
+    background-color: #e67300; /* Slightly darker on hover */
+    box-shadow: 0 4px 12px rgba(255, 133, 0, 0.6);
+}
