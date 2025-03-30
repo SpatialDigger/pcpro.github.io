@@ -19,29 +19,30 @@
     <section class="pricing">
       <h2>Choose Your Plan</h2>
       <p>PCPro3 offers flexible pricing options for individuals looking to use point cloud processing tools for various applications. Whether you're working on personal projects, prototypes, or professional tasks, PCPro3 is here to help.</p>
-      
+
       <div class="pricing-table">
-        <!-- Demo Card -->
-        <div class="pricing-plan demo-card">
-          <h3>Try Before You Buy!</h3>
-          <p>We understand that choosing the right software is a big decision. That's why we offer a <strong>free demo</strong> of PCPro3, allowing you to test the software with your own point cloud data before making a commitment.</p>
-          <p>Get started by downloading the demo from our official GitHub page and explore how PCPro3 can improve your 3D data processing.</p>
-          <a href="https://github.com/SpatialDigger/PCPro3/releases/tag/v1.0.0" target="_blank" class="cta-button">Try the Demo for Free</a>
-        </div>
 
         <!-- 3-Month Plan -->
         <div class="pricing-plan">
           <h3>3-Month Plan</h3>
-          <p class="price">£29 / $37 / €34</p>
+          <p class="price">£55 / $71</p>
           <p class="pricing-term">Perfect for short-term projects or exploration</p>
           <a href="#" class="cta-button">Get This Plan</a>
         </div>
 
-        <!-- 1-Year Plan -->
+        <!-- Annual Plan -->
         <div class="pricing-plan">
-          <h3>1-Year Plan</h3>
-          <p class="price">£93 / $118 / €110 <span class="savings">(Save 20%)</span></p>
+          <h3>Annual Plan</h3>
+          <p class="price">£176 / $227 <span class="savings">(Save 20%)</span></p>
           <p class="pricing-term">Ideal for a full year of point cloud processing</p>
+          <a href="#" class="cta-button">Get This Plan</a>
+        </div>
+
+        <!-- Lifetime Plan -->
+        <div class="pricing-plan">
+          <h3>Lifetime Plan</h3>
+          <p class="price">£440 / $570</p>
+          <p class="pricing-term">Pay once for lifetime access to PCPro3</p>
           <a href="#" class="cta-button">Get This Plan</a>
         </div>
       </div>
@@ -67,26 +68,26 @@
 
       <div id="paypal-button-container"></div>
       <script>
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: '37.00' // Price for 3 months; adjust based on the selected plan
-              }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            alert('Payment successful! Thank you, ' + details.payer.name.given_name);
-          });
-        },
-        onError: function(err) {
-          console.error('Error:', err);
-          alert('An error occurred with the payment. Please try again.');
-        }
-      }).render('#paypal-button-container');
+        paypal.Buttons({
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                amount: {
+                  value: '71.00' // Price for 3 months; adjust based on the selected plan
+                }
+              }]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              alert('Payment successful! Thank you, ' + details.payer.name.given_name);
+            });
+          },
+          onError: function(err) {
+            console.error('Error:', err);
+            alert('An error occurred with the payment. Please try again.');
+          }
+        }).render('#paypal-button-container');
       </script>
     </section>
 
