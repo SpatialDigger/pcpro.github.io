@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCPro3 - Student Plan</title>
-    <link rel="stylesheet" href="../styles.css"> <!-- Ensure this is linked to your existing CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCPro3 🎓 Student Plan</title>
+  <link rel="stylesheet" href="style.css"> <!-- Ensure this is linked to your existing CSS file -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script> <!-- PayPal SDK -->
 </head>
 <body>
 
-    <div class="container">
-        <header class="header">
-            <h1>PCPro3 Student Plan</h1>
-            <p>Unlock the power of PCPro3 with a student-exclusive price.</p>
-        </header>
+  <div class="container">
+    <header class="header">
+      <h1>PCPro3 🎓 Student Plan</h1>
+      <p>Unlock the power of PCPro3 with a student-exclusive price and supercharge your academic projects.</p>
+    </header>
+    <!-- Pricing Explanation Section -->
+    <section class="pricing">
+      <h2>Pricing</h2>
+      <p>PCPro3 offers two flexible pricing options for students to suit different needs. Whether you're working on a short-term project or need the tool for a full academic year, PCPro3 makes it easier than ever to access powerful point cloud processing tools!</p>
+      <div class="pricing-table">
+        <!-- Pricing Plans -->
+        <div class="pricing-plan">
+          <h3>Try Before You Buy!</h3>
+          <p>We understand that choosing the right software is a big decision, especially for students. That's why we offer a <strong>free demo</strong> of PCPro3. This allows you to test the software with your own point cloud data before committing to a full purchase.</p>
+          <p>Get started by downloading the demo from our official GitHub page and see how PCPro3 can transform your 3D data processing.</p>
+          <a href="https://github.com/SpatialDigger/PCPro3/releases/tag/v1.0.0" target="_blank" class="cta-button">Try the Demo for Free</a>
+        </div>
+        <div class="pricing-plan">
+          <h3>3-Month Plan</h3>
+          <p class="price">£29 / $37 / €34</p>
+          <p class="pricing-term">Perfect for short-term projects</p>
+          <a href="#" class="cta-button">Get This Plan</a>
+        </div>
+        <div class="pricing-plan">
+          <h3>1-Year Plan</h3>
+          <p class="price">£93 / $118 / €110 <span class="savings">(Save 20%)</span></p>
+          <p class="pricing-term">Ideal for a full academic year</p>
+          <a href="#" class="cta-button">Get This Plan</a>
+        </div>
+      </div>
+      <p><strong>Important:</strong> Pricing is available in GBP, USD, and EUR. PayPal will automatically convert payments based on the current exchange rates.</p>
+    </section>
+    <!-- Sales Pitch Section -->
+    <section class="sales-pitch">
+      <h2>Why Choose PCPro3 for Your Projects?</h2>
+      <ul>
+        <li>🚀 <strong>Boost Your Project Quality</strong>: Take your point cloud processing to the next level.</li>
+        <li>🎓 <strong>Perfect for Student Projects</strong>: Enhance your academic projects with professional-grade tools.</li>
+        <li>👥 <strong>Showcase Your Work</strong>: Create stunning visualizations to impress professors and peers.</li>
+        <li>🌍 <strong>Real-World Applications</strong>: Gain valuable experience with your pointcloud data.</li>
+      </ul>
+    </section>
 
-        <section class="pricing-info">
-            <h2>Pricing</h2>
-            <div class="pricing-plan">
-                <p><span class="price">£29 / $37</span> for 3 Months</p>
-                <p><span class="price">£93 / $118</span> for 1 Year <span class="savings">(Save 20%)</span></p>
-            </div>
-            <a href="#" class="cta-button">Get Student Licence</a>
-        </section>
+    <!-- Payment Options Section -->
+    <section class="payment-options">
+      <h2>Payment Options</h2>
+      <p>Select your preferred payment method:</p>
 
-        <section class="note">
-            <p>* Requires valid student verification.</p>
-        </section>
-    </div>
+      <div id="paypal-button-container"></div>
+      <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '37.00' // Price for 3 months; adjust based on the selected plan
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Payment successful! Thank you, ' + details.payer.name.given_name);
+          });
+        },
+        onError: function(err) {
+          console.error('Error:', err);
+          alert('An error occurred with the payment. Please try again.');
+        }
+      }).render('#paypal-button-container');
+      </script>
+    </section>
+
+    <!-- Note Section -->
+    <section class="note">
+      <p>* Requires valid student verification.</p>
+    </section>
+
+    <!-- Invitation to Publish and Promote Work -->
+    <section class="publish-invitation">
+      <h2>Ready to Publish? Let's Promote Your Work!</h2>
+      <p>If you're planning to publish your work, get in touch with us! We can help promote your project and provide exposure to your research. Sharing your work with a wider audience can make a real impact on your academic career.</p>
+      <p>Reach out to us at <strong><a href="mailto:pointcloud.pro@gmail.com">pointcloud.pro@gmail.com</a></strong> to discuss how we can help showcase your research.</p>
+    </section>
+  </div>
 
 </body>
 </html>
