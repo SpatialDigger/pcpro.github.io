@@ -1,456 +1,418 @@
+/* General Body Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Dark Gray */
+    background-color: #fafafa; /* Light Gray Background */
 }
+
+/* Navigation Bar */
+nav {
+    background-color: #333; /* Dark Gray */
+    color: white;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #D4AF37; /* Soft Gold */
+}
+
+/* Header Section */
 header {
-  background: #ff6b00;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+    background-color: #222;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
+/* Hero Section */
 .hero {
-  background: #333; /* Dark background color */
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
+    background-color: #333; /* Dark Gray */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
 }
+
 .hero h1 {
-  font-size: 48px;
-  margin: 0;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
+
 .hero p {
-  font-size: 22px;
-  margin: 15px 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
+
 .cta-button {
-  display: inline-block;
-  background: #ff6b00;
-  color: white;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 5px;
-  font-size: 20px;
-  margin-top: 20px;
-  transition: 0.3s;
+    background-color: #D4AF37; /* Soft Gold */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
+
 .cta-button:hover {
-  background: #d55a00;
+    background-color: #c6932b; /* Darker Soft Gold */
 }
-.container {
-  width: 80%;
-  margin: 40px auto;
-  text-align: center;
-}
+
+/* Features Section */
 .features {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
 }
+
 .feature {
-  background: white;
-  width: 280px;
-  padding: 20px;
-  margin: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.video {
-  margin-top: 30px;
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
+
+.feature p {
+    font-size: 1rem;
+}
+
+/* Video Section */
 .video iframe {
-  width: 70%;
-  height: 500px; /* Increased height for better visibility */
+    width: 100%;
+    height: 450px;
+    border: none;
 }
+
+/* Showcase Section */
+#showcase {
+    background-color: #fafafa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#showcase p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Demo Section */
+.demo {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.demo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Pricing Section */
 .pricing {
-  background: #222;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
 }
+
 .pricing h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
+
 .pricing-table {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
+
 .pricing-plan {
-  background: white;
-  color: #333;
-  padding: 30px;
-  border-radius: 10px;
-  width: 320px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 .pricing-plan h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
+
 .pricing-plan ul {
-  list-style: none;
-  padding: 0;
-}
-.pricing-plan ul li {
-  font-size: 18px;
-  margin: 10px 0;
-}
-.pricing-term {
-  font-weight: bold;
-}
-.price {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ff6b00;
-  margin: 15px 0;
-}
-.savings {
-  font-size: 16px;
-  color: green;
-  font-weight: normal;
-  margin-left: 5px;
-}
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 50px;
+    list-style-type: none;
+    padding: 0;
 }
 
+.pricing-plan .price {
+    font-size: 1.2rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.pricing-plan .savings {
+    font-size: 1rem;
+    color: #D4AF37; /* Soft Gold */
+}
+
+.cta-button-container {
+    margin-top: 20px;
+}
+
+/* Tech Specs Section */
+.tech-specs {
+    background-color: #fafafa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.spec-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.spec-item {
+    width: 45%;
+}
+
+.spec-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.spec-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.spec-item li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
 .projects {
-  background: #f4f4f4;
-  padding: 60px 20px;
-  text-align: center;
-}
-.projects h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-.project-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.project {
-  background: white;
-  padding: 25px;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: all 0.3s ease;
+    background-color: #fff; /* White */
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.project:hover {
-  transform: translateY(-10px); /* Add subtle hover effect */
+.projects h2 {
+    font-size: 2rem;
+    color: #333; /* Dark Gray */
+    margin-bottom: 30px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.project {
+    background-color: #f7f7f7; /* Light Warm Gray */
+    padding: 25px 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
 .project h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #ff6b00; /* Bright color for project title */
+    font-size: 1.5rem;
+    color: #222; /* Charcoal */
+    margin-bottom: 15px;
 }
 
 .project p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  color: #333;
+    font-size: 1rem;
+    color: #666; /* Light Gray */
+    margin-bottom: 20px;
 }
 
 .project-link {
-  font-size: 16px;
-  color: #ff6b00; /* Match the color with the title */
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+    color: #D4AF37; /* Soft Gold */
+    text-decoration: none;
 }
 
 .project-link:hover {
-  color: #d55a00; /* Darker color on hover */
-  border-bottom: 2px solid #d55a00;
+    color: #c6932b; /* Darker Soft Gold */
 }
 
-
-/* Updated Published Articles Section */
+/* Articles Section */
 .articles {
-  background: #222; /* Dark background */
-  color: white; /* White text */
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.articles h2 {
+    font-size: 2rem;
+    color: #333; /* Dark Gray */
+    margin-bottom: 30px;
+}
+
+.article-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.article {
+    background-color: #f7f7f7; /* Light Gray */
+    padding: 25px 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.article-link {
+    color: #D4AF37; /* Soft Gold */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-link:hover {
+    color: #c6932b; /* Darker Soft Gold */
+}
+
+.article p {
+    font-size: 1rem;
+    color: #666; /* Light Gray */
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #D4AF37; /* Soft Gold */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #c6932b; /* Darker Soft Gold */
+}
+
+/* Showcase Section */
+#showcase {
+  background-color: #eef3f9;
   padding: 60px 20px;
   text-align: center;
 }
 
-.articles h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.article-links {
-  display: grid;  /* Use grid for two-column layout */
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));  /* 2 columns on larger screens */
-  gap: 20px;  /* Space between items */
-  justify-items: center; /* Center-align items in each column */
-  justify-content: center; /* Center the entire grid within the container */
-  max-width: 1200px; /* Limit the maximum width of the grid */
-  margin: 0 auto; /* Center the grid within the parent container */
-}
-
-.article {
-  background: #333;
-  padding: 20px;
-  border-radius: 8px;
-  width: 100%;  /* Full width of the column */
-  max-width: 320px;  /* Limit the max width for a consistent design */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-.article:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-}
-
-.article a {
-  font-size: 18px;
-  color: #ff6b00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.article a:hover {
-  color: #d55a00;
-}
-
-.article p {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #ddd; /* Slightly lighter text for the citation */
-}
-
-.article .button {
-  display: inline-block;
-  background: #ff6b00;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
-
-.article .button:hover {
-  background: #d55a00;
-}
-/* Updated Published Articles Section */
-.articles {
-  background: #222; /* Dark background */
-  color: white; /* White text */
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.articles h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.article-links {
-  display: grid;  /* Use grid for two-column layout */
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));  /* 2 columns on larger screens */
-  gap: 20px;  /* Space between items */
-  justify-items: center; /* Center-align items in each column */
-  justify-content: center; /* Center the entire grid within the container */
-  max-width: 1200px; /* Limit the maximum width of the grid */
-  margin: 0 auto; /* Center the grid within the parent container */
-}
-
-.article {
-  background: #333;
-  padding: 20px;
-  border-radius: 8px;
-  width: 100%;  /* Full width of the column */
-  max-width: 320px;  /* Limit the max width for a consistent design */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-.article:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-}
-
-.article a {
-  font-size: 18px;
-  color: #ff6b00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.article a:hover {
-  color: #d55a00;
-}
-
-.article p {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #ddd; /* Slightly lighter text for the citation */
-}
-
-.article .button {
-  display: inline-block;
-  background: #ff6b00;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
-
-.article .button:hover {
-  background: #d55a00;
-}
-
-
-
-.demo {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 40px auto;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5);
-  border: 2px solid #ff8500;
-}
-
-.demo .cta-button {
-  background-color: #ff8500;
-  color: white;
-  font-size: 18px;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-.demo .cta-button:hover {
-  background-color: #e67300;
-  box-shadow: 0 4px 12px rgba(255, 133, 0, 0.6);
-}
-
-
-
-
-
-
-.demo h2, .demo p {
-  color: white;
-}
-
-
-
-
-.sales-pitch {
-  margin-top: 40px;
-  padding: 40px;
-  background: #f9f9f9;
+#showcase h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
   color: #333;
+}
+
+#showcase p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Showcase List */
+.showcase-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Showcase Item */
+.showcase-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
   text-align: left;
 }
 
-.sales-pitch ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.sales-pitch ul li {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.publish-invitation {
-  background: #fff; /* White background for better contrast */
-  padding: 60px 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 10px; /* Rounded corners for a smoother look */
-  max-width: 900px; /* Limit max width for better control */
-  margin: 40px auto; /* Centering the content with a margin */
-}
-
-.publish-invitation h2 {
-  font-size: 36px;
-  color: #333; /* Dark text color for better readability */
-  margin-bottom: 20px;
-  font-weight: bold; /* Make the heading stand out */
-}
-
-.publish-invitation p {
-  font-size: 18px;
-  color: #555; /* Lighter color for the body text */
-  line-height: 1.6;
-  max-width: 800px; /* Control the width of the text for better readability */
-  margin: 0 auto 30px; /* Auto margin to center the text */
-}
-
-.publish-invitation .cta-button {
-  background-color: #ff6b00; /* Bright orange button for visibility */
-  color: white;
-  font-size: 18px;
-  padding: 14px 30px;
+.showcase-item img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
+}
+
+.showcase-item h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+.showcase-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.showcase-item .cta-button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
   text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 20px;
+  transition: background-color 0.3s;
 }
 
-.publish-invitation .cta-button:hover {
-  background-color: #d55a00; /* Slightly darker on hover */
-  transform: translateY(-5px); /* Add a subtle hover effect */
+.showcase-item .cta-button:hover {
+  background-color: #218838;
 }
 
 
-.left-aligned-list {
-  list-style-type: none; /* Remove default bullets */
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.left-aligned-list li {
-  position: relative; /* Make space for custom bullet */
-  padding-left: 30px; /* Add padding for space between bullet and text */
-  font-size: 18px;
-  line-height: 1.6;
-  /*color: #333;  Set color for the list text */
-}
-
-.left-aligned-list li::before {
-  content: "✔"; /* Custom bullet (you can replace this with your own symbol or emoji) */
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 20px; /* Adjust bullet size */
-  color: #ff6b00; /* Set color for the custom bullet */
+/* Footer */
+footer {
+    background-color: #333; /* Dark Gray */
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
